@@ -12,7 +12,7 @@ setup(
     readme="README.md",
     python_requires=">=3.8",
     author="Max Bain",
-    url="https://github.com/m-bain/whisperx",
+    url="https://github.com/egorsmkv/whisperx",
     license="MIT",
     packages=find_packages(exclude=["tests*"]),
     install_requires=[
@@ -21,7 +21,7 @@ setup(
             open(os.path.join(os.path.dirname(__file__), "requirements.txt"))
         )
     ]
-    + [f"pyannote.audio==3.1.1"],
+    + [f"pyannote.audio==3.1.1", "git+https://github.com/egorsmkv/faster-whisper"],
     entry_points={
         "console_scripts": ["whisperx=whisperx.transcribe:cli"],
     },
